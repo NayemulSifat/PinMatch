@@ -64,6 +64,10 @@
             const randomCode = Math.round(Math.random() * (9999 - 1000)) + 1000;
 
             document.getElementById("generated-code").value = randomCode;
+            document.getElementById("users-generated-code").value = "";
+            document.getElementById("correct-code").style.display = "none"; 
+            document.getElementById("incorrect-code").style.display = "none";
+
         });
 
 
@@ -97,8 +101,7 @@
             if (document.getElementById("generated-code").value != document.getElementById("users-generated-code").value ) {
                 document.getElementById("correct-code").style.display = "none";
                 document.getElementById("incorrect-code").style.display = "block"; 
-                document.getElementById("users-generated-code").value = "";
-
+  
             }
         } 
          );
